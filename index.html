@@ -1,1 +1,182 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PlatoMy Dashboard</title>
+<style>
+:root {
+  --pink: #F996B1;
+  --matcha: #DDEBCF;
+  --green: #203B2D;
+  --card: #2D4937;
+  --white: #FFFDF9;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--green);
+  color: var(--white);
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+header {
+  padding: 22px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid #49634D;
+}
+.logo {
+  width: 46px;
+  height: 46px;
+  border-radius: 15px;
+  background: var(--pink);
+  color: var(--green);
+  display: grid;
+  place-items: center;
+  font-size: 25px;
+}
+header h1 {
+  color: var(--pink);
+  margin: 0;
+  font-size: 24px;
+}
+header p {
+  margin: 4px 0 0;
+  color: var(--matcha);
+  font-size: 12px;
+}
+main { padding: 22px 16px; max-width: 800px; margin: auto; }
+.eyebrow {
+  color: var(--matcha);
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+h2 { font-size: 25px; margin: 10px 0 6px; }
+.sub { color: #C5D5C5; font-size: 14px; }
+.status {
+  display: inline-block;
+  color: var(--matcha);
+  border: 1px solid #829B7B;
+  padding: 7px 11px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin: 12px 0 22px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.card {
+  background: var(--card);
+  border: 1px solid #47634D;
+  border-radius: 18px;
+  padding: 17px;
+  min-height: 145px;
+}
+.emoji { font-size: 26px; }
+.card h3 { margin: 14px 0 7px; font-size: 16px; }
+.card p { margin: 0; color: #D0DDCE; font-size: 12px; line-height: 1.5; }
+button {
+  margin-top: 14px;
+  border: 0;
+  background: var(--pink);
+  color: var(--green);
+  padding: 9px 12px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.notice {
+  margin-top: 20px;
+  background: #263F30;
+  border-radius: 14px;
+  padding: 15px;
+  color: var(--matcha);
+  font-size: 13px;
+  line-height: 1.6;
+}
+footer {
+  text-align: center;
+  padding: 25px 10px;
+  color: #B6C9B5;
+  font-size: 11px;
+}
+@media (max-width: 360px) {
+  .grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">🎲</div>
+  <div>
+    <h1>PlatoMy</h1>
+    <p>COMMUNITY CONTROL PANEL</p>
+  </div>
+</header>
+
+<main>
+  <div class="eyebrow">STRAWBERRY MATCHA 🍓🍵</div>
+  <h2>Dashboard Overview</h2>
+  <div class="sub">Your community, all in one place.</div>
+  <div class="status">● Demo Mode — Not Connected</div>
+
+  <div class="grid">
+    <section class="card">
+      <div class="emoji">👥</div>
+      <h3>Members</h3>
+      <p>Member statistics will appear here after connection.</p>
+      <button onclick="info('Members')">Open</button>
+    </section>
+    <section class="card">
+      <div class="emoji">💰</div>
+      <h3>Coins & Pips</h3>
+      <p>View balances and transaction records.</p>
+      <button onclick="info('Coins & Pips')">Open</button>
+    </section>
+    <section class="card">
+      <div class="emoji">🏆</div>
+      <h3>Leaderboard</h3>
+      <p>Activity points and member rankings.</p>
+      <button onclick="info('Leaderboard')">Open</button>
+    </section>
+    <section class="card">
+      <div class="emoji">🎉</div>
+      <h3>Events</h3>
+      <p>Manage events, participants and rewards.</p>
+      <button onclick="info('Events')">Open</button>
+    </section>
+    <section class="card">
+      <div class="emoji">🎁</div>
+      <h3>Giveaway & Raffle</h3>
+      <p>Manage entries, prizes and winners.</p>
+      <button onclick="info('Giveaway & Raffle')">Open</button>
+    </section>
+    <section class="card">
+      <div class="emoji">🛡️</div>
+      <h3>Moderation</h3>
+      <p>Review reports and moderation logs.</p>
+      <button onclick="info('Moderation')">Open</button>
+    </section>
+  </div>
+
+  <div class="notice">
+    <strong>🔒 Safe Demo</strong><br>
+    This dashboard is not connected to your Discord bot.
+    No real member data or balances are being changed.
+  </div>
+</main>
+
+<footer>PLATOMY • MADE FOR THE COMMUNITY 💗</footer>
+
+<script>
+function info(section) {
+  alert(section + " — Demo mode. Discord connection will be added later.");
+}
+</script>
+</body>
+</html>
+
